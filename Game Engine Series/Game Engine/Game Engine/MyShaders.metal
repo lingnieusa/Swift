@@ -7,8 +7,9 @@ using namespace metal;
 //vertex = type of shader
 //float4 = return type
 //basic_vertex_shader = name of the shader.  This should match the vertex function in swift.
-vertex float4 basic_vertex_shader(){
-    return float4(1);
+vertex float4 basic_vertex_shader(device float3 *vertices [[ buffer(0) ]],
+                                  uint vertexID [[ vertex_id ]]){
+    return float4(vertices[vertexID], 1);
 }
 
 //Likewise for the basic fragment shader
