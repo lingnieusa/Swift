@@ -16,6 +16,7 @@
 		FC3513E827BD8B3400EAFA76 /* Game_EngineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3513E727BD8B3400EAFA76 /* Game_EngineUITestsLaunchTests.swift */; };
 		FC3513F627BD91CA00EAFA76 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3513F527BD91CA00EAFA76 /* GameView.swift */; };
 		FC3513F827BDA3E300EAFA76 /* MyShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FC3513F727BDA3E300EAFA76 /* MyShaders.metal */; };
+		FCB23DDB27BF2A420025555E /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB23DDA27BF2A420025555E /* Types.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		FC3513E727BD8B3400EAFA76 /* Game_EngineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_EngineUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC3513F527BD91CA00EAFA76 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		FC3513F727BDA3E300EAFA76 /* MyShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MyShaders.metal; sourceTree = "<group>"; };
+		FCB23DDA27BF2A420025555E /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3513F527BD91CA00EAFA76 /* GameView.swift */,
+				FCB23DDA27BF2A420025555E /* Types.swift */,
 				FC3513CF27BD8B3300EAFA76 /* Main.storyboard */,
 				FC3513F727BDA3E300EAFA76 /* MyShaders.metal */,
 				FC3513F427BD8D2D00EAFA76 /* Other Files */,
@@ -268,6 +271,7 @@
 				FC3513F827BDA3E300EAFA76 /* MyShaders.metal in Sources */,
 				FC3513C727BD8B3200EAFA76 /* AppDelegate.swift in Sources */,
 				FC3513F627BD91CA00EAFA76 /* GameView.swift in Sources */,
+				FCB23DDB27BF2A420025555E /* Types.swift in Sources */,
 				FC3513CC27BD8B3200EAFA76 /* Game_Engine.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
