@@ -17,6 +17,12 @@
 		FC3513F627BD91CA00EAFA76 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3513F527BD91CA00EAFA76 /* GameView.swift */; };
 		FC3513F827BDA3E300EAFA76 /* MyShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FC3513F727BDA3E300EAFA76 /* MyShaders.metal */; };
 		FCB23DDB27BF2A420025555E /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB23DDA27BF2A420025555E /* Types.swift */; };
+		FCBFEE2227C06C9F00F5339D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2127C06C9F00F5339D /* Engine.swift */; };
+		FCBFEE2427C07E6C00F5339D /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2327C07E6C00F5339D /* Preferences.swift */; };
+		FCBFEE2627C0A87800F5339D /* ShaderLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2527C0A87800F5339D /* ShaderLibrary.swift */; };
+		FCBFEE2827C0A89900F5339D /* VertexDescriptorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2727C0A89900F5339D /* VertexDescriptorLibrary.swift */; };
+		FCBFEE2A27C0A8B100F5339D /* RenderPipelineDescriptorLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2927C0A8B100F5339D /* RenderPipelineDescriptorLibrary.swift */; };
+		FCBFEE2C27C0A8C800F5339D /* RenderPipelineStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2B27C0A8C800F5339D /* RenderPipelineStateLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,12 @@
 		FC3513F527BD91CA00EAFA76 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		FC3513F727BDA3E300EAFA76 /* MyShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MyShaders.metal; sourceTree = "<group>"; };
 		FCB23DDA27BF2A420025555E /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		FCBFEE2127C06C9F00F5339D /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
+		FCBFEE2327C07E6C00F5339D /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		FCBFEE2527C0A87800F5339D /* ShaderLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShaderLibrary.swift; sourceTree = "<group>"; };
+		FCBFEE2727C0A89900F5339D /* VertexDescriptorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VertexDescriptorLibrary.swift; sourceTree = "<group>"; };
+		FCBFEE2927C0A8B100F5339D /* RenderPipelineDescriptorLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineDescriptorLibrary.swift; sourceTree = "<group>"; };
+		FCBFEE2B27C0A8C800F5339D /* RenderPipelineStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RenderPipelineStateLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,10 +113,10 @@
 		FC3513C527BD8B3200EAFA76 /* Game Engine */ = {
 			isa = PBXGroup;
 			children = (
-				FC3513F527BD91CA00EAFA76 /* GameView.swift */,
-				FCB23DDA27BF2A420025555E /* Types.swift */,
-				FC3513CF27BD8B3300EAFA76 /* Main.storyboard */,
-				FC3513F727BDA3E300EAFA76 /* MyShaders.metal */,
+				FCBFEE2027C06C7C00F5339D /* Library */,
+				FCBFEE1F27C06C5900F5339D /* Shaders */,
+				FCBFEE1E27C06C1E00F5339D /* Display */,
+				FCBFEE1D27C06BFD00F5339D /* Core */,
 				FC3513F427BD8D2D00EAFA76 /* Other Files */,
 			);
 			path = "Game Engine";
@@ -136,6 +148,44 @@
 				FC3513CA27BD8B3200EAFA76 /* Game_Engine.xcdatamodeld */,
 			);
 			path = "Other Files";
+			sourceTree = "<group>";
+		};
+		FCBFEE1D27C06BFD00F5339D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FCB23DDA27BF2A420025555E /* Types.swift */,
+				FCBFEE2127C06C9F00F5339D /* Engine.swift */,
+				FCBFEE2327C07E6C00F5339D /* Preferences.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FCBFEE1E27C06C1E00F5339D /* Display */ = {
+			isa = PBXGroup;
+			children = (
+				FC3513CF27BD8B3300EAFA76 /* Main.storyboard */,
+				FC3513F527BD91CA00EAFA76 /* GameView.swift */,
+			);
+			path = Display;
+			sourceTree = "<group>";
+		};
+		FCBFEE1F27C06C5900F5339D /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				FC3513F727BDA3E300EAFA76 /* MyShaders.metal */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
+		FCBFEE2027C06C7C00F5339D /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				FCBFEE2527C0A87800F5339D /* ShaderLibrary.swift */,
+				FCBFEE2727C0A89900F5339D /* VertexDescriptorLibrary.swift */,
+				FCBFEE2927C0A8B100F5339D /* RenderPipelineDescriptorLibrary.swift */,
+				FCBFEE2B27C0A8C800F5339D /* RenderPipelineStateLibrary.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,11 +318,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCBFEE2A27C0A8B100F5339D /* RenderPipelineDescriptorLibrary.swift in Sources */,
+				FCBFEE2827C0A89900F5339D /* VertexDescriptorLibrary.swift in Sources */,
 				FC3513F827BDA3E300EAFA76 /* MyShaders.metal in Sources */,
+				FCBFEE2427C07E6C00F5339D /* Preferences.swift in Sources */,
+				FCBFEE2627C0A87800F5339D /* ShaderLibrary.swift in Sources */,
+				FCBFEE2227C06C9F00F5339D /* Engine.swift in Sources */,
 				FC3513C727BD8B3200EAFA76 /* AppDelegate.swift in Sources */,
 				FC3513F627BD91CA00EAFA76 /* GameView.swift in Sources */,
 				FCB23DDB27BF2A420025555E /* Types.swift in Sources */,
 				FC3513CC27BD8B3200EAFA76 /* Game_Engine.xcdatamodeld in Sources */,
+				FCBFEE2C27C0A8C800F5339D /* RenderPipelineStateLibrary.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
