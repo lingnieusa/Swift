@@ -18,6 +18,8 @@ class Engine {
         
         RenderPipelineStateLibrary.initialize()
         
+        MeshLibrary.Initialize()
+        
     }
     
 }
