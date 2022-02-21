@@ -29,6 +29,7 @@
 		FCBFEE3827C2F7D900F5339D /* MeshLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE3727C2F7D900F5339D /* MeshLibrary.swift */; };
 		FCBFEE3B27C2F8AA00F5339D /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE3A27C2F8AA00F5339D /* Renderable.swift */; };
 		FCBFEE3D27C2F8E600F5339D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE3C27C2F8E600F5339D /* Player.swift */; };
+		FCBFEE4027C4197700F5339D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE3F27C4197700F5339D /* Math.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		FCBFEE3727C2F7D900F5339D /* MeshLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeshLibrary.swift; sourceTree = "<group>"; };
 		FCBFEE3A27C2F8AA00F5339D /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
 		FCBFEE3C27C2F8E600F5339D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FCBFEE3F27C4197700F5339D /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 		FC3513C527BD8B3200EAFA76 /* Game Engine */ = {
 			isa = PBXGroup;
 			children = (
+				FCBFEE3E27C4195500F5339D /* Maths */,
 				FCBFEE1D27C06BFD00F5339D /* Core */,
 				FCBFEE2F27C1EBEF00F5339D /* Game Shizz */,
 				FCBFEE2027C06C7C00F5339D /* Library */,
@@ -228,6 +231,14 @@
 				FCBFEE3A27C2F8AA00F5339D /* Renderable.swift */,
 			);
 			path = protocols;
+			sourceTree = "<group>";
+		};
+		FCBFEE3E27C4195500F5339D /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				FCBFEE3F27C4197700F5339D /* Math.swift */,
+			);
+			path = Maths;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +382,7 @@
 				FC3513C727BD8B3200EAFA76 /* AppDelegate.swift in Sources */,
 				FC3513F627BD91CA00EAFA76 /* GameView.swift in Sources */,
 				FCB23DDB27BF2A420025555E /* Types.swift in Sources */,
+				FCBFEE4027C4197700F5339D /* Math.swift in Sources */,
 				FCBFEE3127C1EC1200F5339D /* GameObject.swift in Sources */,
 				FC3513CC27BD8B3200EAFA76 /* Game_Engine.xcdatamodeld in Sources */,
 				FCBFEE2C27C0A8C800F5339D /* RenderPipelineStateLibrary.swift in Sources */,
