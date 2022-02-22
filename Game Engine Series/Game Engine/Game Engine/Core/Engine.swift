@@ -19,6 +19,7 @@ class Engine {
         RenderPipelineStateLibrary.initialize()
         
         MeshLibrary.Initialize()
+        SceneManager.Initialize(Preferences.StartingSceneType)
         
     }
     

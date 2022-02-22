@@ -30,6 +30,9 @@
 		FCBFEE3B27C2F8AA00F5339D /* Renderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE3A27C2F8AA00F5339D /* Renderable.swift */; };
 		FCBFEE3D27C2F8E600F5339D /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE3C27C2F8E600F5339D /* Player.swift */; };
 		FCBFEE4027C4197700F5339D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE3F27C4197700F5339D /* Math.swift */; };
+		FCBFEE7D27C4A98F00F5339D /* SceneManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE7C27C4A98F00F5339D /* SceneManager.swift */; };
+		FCBFEE8027C4AA1500F5339D /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE7F27C4AA1500F5339D /* Scene.swift */; };
+		FCBFEE8227C4AA2C00F5339D /* SandboxScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE8127C4AA2C00F5339D /* SandboxScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,9 @@
 		FCBFEE3A27C2F8AA00F5339D /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
 		FCBFEE3C27C2F8E600F5339D /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		FCBFEE3F27C4197700F5339D /* Math.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		FCBFEE7C27C4A98F00F5339D /* SceneManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneManager.swift; sourceTree = "<group>"; };
+		FCBFEE7F27C4AA1500F5339D /* Scene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		FCBFEE8127C4AA2C00F5339D /* SandboxScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SandboxScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +137,7 @@
 				FCBFEE1D27C06BFD00F5339D /* Core */,
 				FCBFEE2F27C1EBEF00F5339D /* Game Shizz */,
 				FCBFEE2027C06C7C00F5339D /* Library */,
+				FCBFEE7B27C4A95A00F5339D /* Manager */,
 				FCBFEE1F27C06C5900F5339D /* Shaders */,
 				FCBFEE1E27C06C1E00F5339D /* Display */,
 				FC3513F427BD8D2D00EAFA76 /* Other Files */,
@@ -210,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				FCBFEE3527C2F78200F5339D /* Node.swift */,
+				FCBFEE7E27C4A9E600F5339D /* Scenes */,
 				FCBFEE3427C2F75A00F5339D /* GameObjects */,
 				FCBFEE3927C2F86B00F5339D /* protocols */,
 			);
@@ -239,6 +247,23 @@
 				FCBFEE3F27C4197700F5339D /* Math.swift */,
 			);
 			path = Maths;
+			sourceTree = "<group>";
+		};
+		FCBFEE7B27C4A95A00F5339D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				FCBFEE7C27C4A98F00F5339D /* SceneManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FCBFEE7E27C4A9E600F5339D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FCBFEE7F27C4AA1500F5339D /* Scene.swift */,
+				FCBFEE8127C4AA2C00F5339D /* SandboxScene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,11 +408,14 @@
 				FC3513F627BD91CA00EAFA76 /* GameView.swift in Sources */,
 				FCB23DDB27BF2A420025555E /* Types.swift in Sources */,
 				FCBFEE4027C4197700F5339D /* Math.swift in Sources */,
+				FCBFEE8027C4AA1500F5339D /* Scene.swift in Sources */,
 				FCBFEE3127C1EC1200F5339D /* GameObject.swift in Sources */,
 				FC3513CC27BD8B3200EAFA76 /* Game_Engine.xcdatamodeld in Sources */,
+				FCBFEE7D27C4A98F00F5339D /* SceneManager.swift in Sources */,
 				FCBFEE2C27C0A8C800F5339D /* RenderPipelineStateLibrary.swift in Sources */,
 				FCBFEE3627C2F78200F5339D /* Node.swift in Sources */,
 				FCBFEE3D27C2F8E600F5339D /* Player.swift in Sources */,
+				FCBFEE8227C4AA2C00F5339D /* SandboxScene.swift in Sources */,
 				FCBFEE3B27C2F8AA00F5339D /* Renderable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

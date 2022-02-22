@@ -1,8 +1,14 @@
 import UIKit
 
 class car{
-    var name:String!
-    var speed:Int = 0
+    var name:String = "I am implicit initializer"
+    var speed:Int = 1
+    var afs = "ads"
+    
+    init(){
+        name = name+"I am explicit constructor"
+        speed = speed+3
+    }
 
 }
 
@@ -18,7 +24,13 @@ func gas(vehicle:car){
 
 
 var car1:car = car()
-car1.name = "Honda"
-car1.start()
-gas(vehicle: car1)
+print(car1.name)
+car1 = .init()
 print(car1.speed)
+print(car1.afs)
+//
+//
+//car1.name = "Honda"
+//car1.start()
+//gas(vehicle: car1)
+//print(car1.speed)
