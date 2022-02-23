@@ -36,6 +36,8 @@
 		FCBFEE8527C5E73500F5339D /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE8427C5E73500F5339D /* Keyboard.swift */; };
 		FCBFEE8727C5E80E00F5339D /* KeyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE8627C5E80E00F5339D /* KeyCodes.swift */; };
 		FCBFEE8927C5E8C000F5339D /* Mouse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE8827C5E8C000F5339D /* Mouse.swift */; };
+		FCBFEE8C27C6098500F5339D /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE8B27C6098500F5339D /* Camera.swift */; };
+		FCBFEE8E27C60E0A00F5339D /* DebugCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE8D27C60E0A00F5339D /* DebugCamera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,8 @@
 		FCBFEE8427C5E73500F5339D /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		FCBFEE8627C5E80E00F5339D /* KeyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodes.swift; sourceTree = "<group>"; };
 		FCBFEE8827C5E8C000F5339D /* Mouse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mouse.swift; sourceTree = "<group>"; };
+		FCBFEE8B27C6098500F5339D /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		FCBFEE8D27C60E0A00F5339D /* DebugCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebugCamera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +230,7 @@
 				FCBFEE3527C2F78200F5339D /* Node.swift */,
 				FCBFEE7E27C4A9E600F5339D /* Scenes */,
 				FCBFEE3427C2F75A00F5339D /* GameObjects */,
+				FCBFEE8A27C6094600F5339D /* Cameras */,
 				FCBFEE3927C2F86B00F5339D /* protocols */,
 			);
 			path = "Game Shizz";
@@ -281,6 +286,15 @@
 				FCBFEE8827C5E8C000F5339D /* Mouse.swift */,
 			);
 			path = Input;
+			sourceTree = "<group>";
+		};
+		FCBFEE8A27C6094600F5339D /* Cameras */ = {
+			isa = PBXGroup;
+			children = (
+				FCBFEE8B27C6098500F5339D /* Camera.swift */,
+				FCBFEE8D27C60E0A00F5339D /* DebugCamera.swift */,
+			);
+			path = Cameras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -421,6 +435,7 @@
 				FCBFEE3327C1ED4200F5339D /* Renderer.swift in Sources */,
 				FCBFEE3827C2F7D900F5339D /* MeshLibrary.swift in Sources */,
 				FCBFEE8927C5E8C000F5339D /* Mouse.swift in Sources */,
+				FCBFEE8E27C60E0A00F5339D /* DebugCamera.swift in Sources */,
 				FCBFEE2227C06C9F00F5339D /* Engine.swift in Sources */,
 				FC3513C727BD8B3200EAFA76 /* AppDelegate.swift in Sources */,
 				FC3513F627BD91CA00EAFA76 /* GameView.swift in Sources */,
@@ -434,6 +449,7 @@
 				FCBFEE7D27C4A98F00F5339D /* SceneManager.swift in Sources */,
 				FCBFEE2C27C0A8C800F5339D /* RenderPipelineStateLibrary.swift in Sources */,
 				FCBFEE3627C2F78200F5339D /* Node.swift in Sources */,
+				FCBFEE8C27C6098500F5339D /* Camera.swift in Sources */,
 				FCBFEE3D27C2F8E600F5339D /* Player.swift in Sources */,
 				FCBFEE8227C4AA2C00F5339D /* SandboxScene.swift in Sources */,
 				FCBFEE3B27C2F8AA00F5339D /* Renderable.swift in Sources */,

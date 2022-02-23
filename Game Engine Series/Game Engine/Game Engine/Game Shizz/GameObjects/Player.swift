@@ -3,7 +3,7 @@ import MetalKit
 class Player: GameObject {
     
     init() {
-        super.init(meshType: .Quad_Custom)
+        super.init(meshType: .Triangle_Custom)
     }
     
     override func update(deltaTime: Float) {
