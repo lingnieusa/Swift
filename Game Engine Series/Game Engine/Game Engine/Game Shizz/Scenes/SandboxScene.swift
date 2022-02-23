@@ -15,11 +15,11 @@ class SandboxScene:Scene{
         }
     }
     
-    override func update(deltaTime: Float) {
-        for child in children{
-            child.rotation.z += 0.02
-        }
-        super.update(deltaTime: deltaTime)
-    }
+//    override func update(deltaTime: Float) {
+//        for child in children{
+//            child.rotation.z += 0.02
+//        }
+//        super.update(deltaTime: deltaTime)
+//    }
     
 }
