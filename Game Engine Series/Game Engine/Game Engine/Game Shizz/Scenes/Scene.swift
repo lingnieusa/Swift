@@ -2,8 +2,9 @@ import MetalKit
 
 
 class Scene:Node{
+    var cameraManager = CameraManager()//keyin
     var sceneConstants = SceneConstants()//4x4
-    var camera = DebugCamera()//keyin
+//    var camera = DebugCamera()
     
     override init(){
         super.init()
@@ -12,12 +13,20 @@ class Scene:Node{
     
     func buildScene() { }
     
-    func updateSceneConstants(){
-        sceneConstants.viewMatrix = camera.viewMatrix
+    func addCamera(_ camera: Camera, _ isCurrentCamera: Bool = true){
+        cameraManager.registerCamera(camera: camera)
+        if(isCurrentCamera){
+            cameraManager.setCamera(camera.cameraType)
+        }
     }
     
+    func updateSceneConstants(){
+        sceneConstants.viewMatrix = cameraManager.currentCamera.viewMatrix
+    }
+    func updateCameras(deltaTime: Float){
+        cameraManager.update(deltaTime: deltaTime)
+    }
     override func update(deltaTime: Float) {
-        camera.update(deltaTime: deltaTime)
         updateSceneConstants()
         super.update(deltaTime: deltaTime)
     }
