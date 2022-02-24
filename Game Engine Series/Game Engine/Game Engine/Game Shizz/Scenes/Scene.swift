@@ -11,7 +11,9 @@ class Scene:Node{
         buildScene()
     }
     
-    func buildScene() { }
+    func buildScene() {
+        
+    }
     
     func addCamera(_ camera: Camera, _ isCurrentCamera: Bool = true){
         cameraManager.registerCamera(camera: camera)
@@ -22,6 +24,7 @@ class Scene:Node{
     
     func updateSceneConstants(){
         sceneConstants.viewMatrix = cameraManager.currentCamera.viewMatrix
+        sceneConstants.projectionMatrix = cameraManager.currentCamera.projectionMatrix
     }
     func updateCameras(deltaTime: Float){
         cameraManager.update(deltaTime: deltaTime)

@@ -42,7 +42,9 @@ class Girl:Female{
 }
 
 class Male:Person{
+    var person = initia1()
     override init(){
+        print("initializer:Male")
         super.init()
         build()
     }
@@ -54,7 +56,7 @@ class Male:Person{
 }
 
 class Boy:Male{
-    
+    var initia = initia2()
     override func build() {
         for x in 1..<3{
             var player = Girl()
@@ -72,10 +74,19 @@ class Boy:Male{
     }
     
 }
-
+class initia1{
+    init(){
+        print("initializer1")
+    }
+}
+class initia2{
+    init(){
+        print("initializer2")
+    }
+}
 class SceneManager{
     private static var _currentScene:Person!
-    
+
     public static func Initialize(){
         _currentScene = Boy()
     }

@@ -9,5 +9,6 @@ enum ClearColors{
 class Preferences{
     static var ClearColor = ClearColors.White
     static var MainPixelFormat = MTLPixelFormat.bgra8Unorm
+    public static var MainDepthPixelFormat: MTLPixelFormat = MTLPixelFormat.depth32Float
     public static var StartingSceneType: SceneTypes = SceneTypes.Sandbox
 }

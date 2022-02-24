@@ -14,11 +14,14 @@ class Engine {
         
         VertexDescriptorLibrary.intialize()
         
+        DepthStencilStateLibrary.Intitialize()
+        
         RenderPipelineDescriptorLibrary.initialize()
         
         RenderPipelineStateLibrary.initialize()
         
         MeshLibrary.Initialize()
+        
         SceneManager.Initialize(Preferences.StartingSceneType)
         
     }

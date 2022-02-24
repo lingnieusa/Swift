@@ -16,6 +16,8 @@
 		FC3513E827BD8B3400EAFA76 /* Game_EngineUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3513E727BD8B3400EAFA76 /* Game_EngineUITestsLaunchTests.swift */; };
 		FC3513F627BD91CA00EAFA76 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3513F527BD91CA00EAFA76 /* GameView.swift */; };
 		FC3513F827BDA3E300EAFA76 /* MyShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FC3513F727BDA3E300EAFA76 /* MyShaders.metal */; };
+		FC8F944E27C7064D0043EEA5 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F944D27C7064D0043EEA5 /* Cube.swift */; };
+		FC8F945027C70C230043EEA5 /* DepthStencilStateTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F944F27C70C230043EEA5 /* DepthStencilStateTypes.swift */; };
 		FCB23DDB27BF2A420025555E /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB23DDA27BF2A420025555E /* Types.swift */; };
 		FCBFEE2227C06C9F00F5339D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2127C06C9F00F5339D /* Engine.swift */; };
 		FCBFEE2427C07E6C00F5339D /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2327C07E6C00F5339D /* Preferences.swift */; };
@@ -72,6 +74,8 @@
 		FC3513E727BD8B3400EAFA76 /* Game_EngineUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game_EngineUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FC3513F527BD91CA00EAFA76 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		FC3513F727BDA3E300EAFA76 /* MyShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MyShaders.metal; sourceTree = "<group>"; };
+		FC8F944D27C7064D0043EEA5 /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
+		FC8F944F27C70C230043EEA5 /* DepthStencilStateTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthStencilStateTypes.swift; sourceTree = "<group>"; };
 		FCB23DDA27BF2A420025555E /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		FCBFEE2127C06C9F00F5339D /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		FCBFEE2327C07E6C00F5339D /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -147,8 +151,8 @@
 			children = (
 				FCBFEE3E27C4195500F5339D /* Maths */,
 				FCBFEE1D27C06BFD00F5339D /* Core */,
-				FCBFEE2F27C1EBEF00F5339D /* Game Shizz */,
 				FCBFEE2027C06C7C00F5339D /* Library */,
+				FCBFEE2F27C1EBEF00F5339D /* Game Shizz */,
 				FCBFEE7B27C4A95A00F5339D /* Manager */,
 				FCBFEE1F27C06C5900F5339D /* Shaders */,
 				FCBFEE1E27C06C1E00F5339D /* Display */,
@@ -222,6 +226,7 @@
 				FCBFEE2927C0A8B100F5339D /* RenderPipelineDescriptorLibrary.swift */,
 				FCBFEE2B27C0A8C800F5339D /* RenderPipelineStateLibrary.swift */,
 				FCBFEE3727C2F7D900F5339D /* MeshLibrary.swift */,
+				FC8F944F27C70C230043EEA5 /* DepthStencilStateTypes.swift */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -230,10 +235,10 @@
 			isa = PBXGroup;
 			children = (
 				FCBFEE3527C2F78200F5339D /* Node.swift */,
+				FCBFEE3927C2F86B00F5339D /* protocols */,
 				FCBFEE7E27C4A9E600F5339D /* Scenes */,
 				FCBFEE3427C2F75A00F5339D /* GameObjects */,
 				FCBFEE8A27C6094600F5339D /* Cameras */,
-				FCBFEE3927C2F86B00F5339D /* protocols */,
 			);
 			path = "Game Shizz";
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 			children = (
 				FCBFEE3027C1EC1200F5339D /* GameObject.swift */,
 				FCBFEE3C27C2F8E600F5339D /* Pointer.swift */,
+				FC8F944D27C7064D0043EEA5 /* Cube.swift */,
 			);
 			path = GameObjects;
 			sourceTree = "<group>";
@@ -442,6 +448,8 @@
 				FCBFEE8E27C60E0A00F5339D /* DebugCamera.swift in Sources */,
 				FCBFEE2227C06C9F00F5339D /* Engine.swift in Sources */,
 				FC3513C727BD8B3200EAFA76 /* AppDelegate.swift in Sources */,
+				FC8F944E27C7064D0043EEA5 /* Cube.swift in Sources */,
+				FC8F945027C70C230043EEA5 /* DepthStencilStateTypes.swift in Sources */,
 				FC3513F627BD91CA00EAFA76 /* GameView.swift in Sources */,
 				FCB23DDB27BF2A420025555E /* Types.swift in Sources */,
 				FCBFEE4027C4197700F5339D /* Math.swift in Sources */,
