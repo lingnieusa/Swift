@@ -7,9 +7,9 @@ class SandboxScene:Scene{
     override func buildScene() {
         addCamera(debugCamera)
         
-        debugCamera.position.z = 5
+        debugCamera.position.z = 13
         
-        addChild(cube)
+        addCubes()
 //        addCamera(debugCamera)
 //
 //        for y in -5..<5{
@@ -29,9 +29,27 @@ class SandboxScene:Scene{
 //        }
 //        super.update(deltaTime: deltaTime)
 //    }
-    override func update(deltaTime: Float) {
-        cube.rotation.x += deltaTime
-        cube.rotation.y += deltaTime
-        super.update(deltaTime: deltaTime)
+    func addCubes(){
+        for y in -5..<5 {
+            let posY = Float(y) + 0.5
+            for x in -8..<8 {
+                let posX = Float(x) + 0.5
+                let cube = Cube()
+                cube.position.y = posY
+                cube.position.x = posX
+                cube.scale = float3(0.3, 0.3, 0.3)
+                cube.setColor(ColorUtil.randomColor)//
+                addChild(cube)
+            }
+        }
     }
+    
+//    override func update(deltaTime: Float) {
+//        for child in children{
+//            child.rotation.x += deltaTime
+//            child.rotation.y += deltaTime
+//        }
+//
+//        super.update(deltaTime: deltaTime)
+//    }
 }

@@ -1,7 +1,7 @@
 import MetalKit
 
 class GameObject: Node {
-    
+    private var material = Material()
     var modelConstants = ModelConstants()//4x4
     var mesh: Mesh!//vertices dictionary
     
@@ -30,9 +30,20 @@ class GameObject: Node {
 extension GameObject: Renderable{
     func doRender(_ renderCommandEncoder: MTLRenderCommandEncoder) {
         renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.DepthStencilState(.Less))
-        renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
         renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.Basic))
+        //Vertex Shader
+        renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
         renderCommandEncoder.setVertexBuffer(mesh.vertexBuffer, offset: 0, index: 0)
+        //Fragment Shader
+        renderCommandEncoder.setFragmentBytes(&material, length: Material.stride, index: 1)
         renderCommandEncoder.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: mesh.vertexCount)
+    }
+}
+
+//Material Properties
+extension GameObject {
+    public func setColor(_ color: float4){
+        self.material.color = color
+        self.material.useMaterialColor = true
     }
 }

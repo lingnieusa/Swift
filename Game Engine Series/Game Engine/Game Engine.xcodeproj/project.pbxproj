@@ -18,6 +18,7 @@
 		FC3513F827BDA3E300EAFA76 /* MyShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FC3513F727BDA3E300EAFA76 /* MyShaders.metal */; };
 		FC8F944E27C7064D0043EEA5 /* Cube.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F944D27C7064D0043EEA5 /* Cube.swift */; };
 		FC8F945027C70C230043EEA5 /* DepthStencilStateTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F944F27C70C230043EEA5 /* DepthStencilStateTypes.swift */; };
+		FC8F945327C738D40043EEA5 /* ColorUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F945227C738D40043EEA5 /* ColorUtil.swift */; };
 		FCB23DDB27BF2A420025555E /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB23DDA27BF2A420025555E /* Types.swift */; };
 		FCBFEE2227C06C9F00F5339D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2127C06C9F00F5339D /* Engine.swift */; };
 		FCBFEE2427C07E6C00F5339D /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2327C07E6C00F5339D /* Preferences.swift */; };
@@ -76,6 +77,7 @@
 		FC3513F727BDA3E300EAFA76 /* MyShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = MyShaders.metal; sourceTree = "<group>"; };
 		FC8F944D27C7064D0043EEA5 /* Cube.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cube.swift; sourceTree = "<group>"; };
 		FC8F944F27C70C230043EEA5 /* DepthStencilStateTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepthStencilStateTypes.swift; sourceTree = "<group>"; };
+		FC8F945227C738D40043EEA5 /* ColorUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorUtil.swift; sourceTree = "<group>"; };
 		FCB23DDA27BF2A420025555E /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		FCBFEE2127C06C9F00F5339D /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		FCBFEE2327C07E6C00F5339D /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		FC3513C527BD8B3200EAFA76 /* Game Engine */ = {
 			isa = PBXGroup;
 			children = (
+				FC8F945127C738BE0043EEA5 /* Util */,
 				FCBFEE3E27C4195500F5339D /* Maths */,
 				FCBFEE1D27C06BFD00F5339D /* Core */,
 				FCBFEE2027C06C7C00F5339D /* Library */,
@@ -187,6 +190,14 @@
 				FC3513CA27BD8B3200EAFA76 /* Game_Engine.xcdatamodeld */,
 			);
 			path = "Other Files";
+			sourceTree = "<group>";
+		};
+		FC8F945127C738BE0043EEA5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				FC8F945227C738D40043EEA5 /* ColorUtil.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		FCBFEE1D27C06BFD00F5339D /* Core */ = {
@@ -439,6 +450,7 @@
 				FCBFEE2A27C0A8B100F5339D /* RenderPipelineDescriptorLibrary.swift in Sources */,
 				FCBFEE2827C0A89900F5339D /* VertexDescriptorLibrary.swift in Sources */,
 				FC3513F827BDA3E300EAFA76 /* MyShaders.metal in Sources */,
+				FC8F945327C738D40043EEA5 /* ColorUtil.swift in Sources */,
 				FCBFEE2427C07E6C00F5339D /* Preferences.swift in Sources */,
 				FCBFEE2627C0A87800F5339D /* ShaderLibrary.swift in Sources */,
 				FCBFEE3327C1ED4200F5339D /* Renderer.swift in Sources */,
