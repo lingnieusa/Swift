@@ -7,7 +7,7 @@ class SandboxScene:Scene{
     override func buildScene() {
         addCamera(debugCamera)
         
-        debugCamera.position.z = 13
+        debugCamera.position.z = 60
         
         addCubes()
 //        addCamera(debugCamera)
@@ -23,26 +23,37 @@ class SandboxScene:Scene{
 //        }
     }
     
+    var cubeCollection: CubeCollection!
+    func addCubes(){
+        
+        cubeCollection = CubeCollection(cubesWide: 20, cubesHigh: 20, cubesBack: 20)
+        addChild(cubeCollection)
+    }
+    override func update(deltaTime: Float) {
+        cubeCollection.rotation.z += deltaTime
+        cubeCollection.position.x = 12
+        super.update(deltaTime: deltaTime)
+    }
 //    override func update(deltaTime: Float) {
 //        for child in children{
 //            child.rotation.z += 0.02
 //        }
 //        super.update(deltaTime: deltaTime)
 //    }
-    func addCubes(){
-        for y in -5..<5 {
-            let posY = Float(y) + 0.5
-            for x in -8..<8 {
-                let posX = Float(x) + 0.5
-                let cube = Cube()
-                cube.position.y = posY
-                cube.position.x = posX
-                cube.scale = float3(0.3, 0.3, 0.3)
-                cube.setColor(ColorUtil.randomColor)//
-                addChild(cube)
-            }
-        }
-    }
+//    func addCubes(){
+//        for y in -5..<5 {
+//            let posY = Float(y) + 0.5
+//            for x in -8..<8 {
+//                let posX = Float(x) + 0.5
+//                let cube = Cube()
+//                cube.position.y = posY
+//                cube.position.x = posX
+//                cube.scale = float3(0.3, 0.3, 0.3)
+//                cube.setColor(ColorUtil.randomColor)//
+//                addChild(cube)
+//            }
+//        }
+//    }
     
 //    override func update(deltaTime: Float) {
 //        for child in children{
