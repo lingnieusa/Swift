@@ -1,26 +1,24 @@
 import MetalKit
 
 class GameView: MTKView {
-    
-    var renderer:Renderer!
 
-    
+    var renderer: Renderer!
     required init(coder: NSCoder) {
         super.init(coder: coder)
         
         self.device = MTLCreateSystemDefaultDevice()
         
-        Engine.Ignite(device: device)
+        Engine.Ignite(device: device!)
         
         self.clearColor = Preferences.ClearColor
         
         self.colorPixelFormat = Preferences.MainPixelFormat
+        
         self.depthStencilPixelFormat = Preferences.MainDepthPixelFormat
-
+        
         self.renderer = Renderer(self)
+        
         self.delegate = renderer
-        
-        
     }
     
 }
@@ -35,6 +33,33 @@ extension GameView {
     
     override func keyUp(with event: NSEvent) {
         Keyboard.SetKeyPressed(event.keyCode, isOn: false)
+    }
+}
+
+//--- Mouse Button Input ---
+extension GameView {
+    override func mouseDown(with event: NSEvent) {
+         Mouse.SetMouseButtonPressed(button: event.buttonNumber, isOn: true)
+    }
+    
+    override func mouseUp(with event: NSEvent) {
+         Mouse.SetMouseButtonPressed(button: event.buttonNumber, isOn: false)
+    }
+    
+    override func rightMouseDown(with event: NSEvent) {
+         Mouse.SetMouseButtonPressed(button: event.buttonNumber, isOn: true)
+    }
+    
+    override func rightMouseUp(with event: NSEvent) {
+         Mouse.SetMouseButtonPressed(button: event.buttonNumber, isOn: false)
+    }
+    
+    override func otherMouseDown(with event: NSEvent) {
+         Mouse.SetMouseButtonPressed(button: event.buttonNumber, isOn: true)
+    }
+    
+    override func otherMouseUp(with event: NSEvent) {
+         Mouse.SetMouseButtonPressed(button: event.buttonNumber, isOn: false)
     }
 }
 
@@ -78,4 +103,6 @@ extension GameView {
                                    userInfo: nil)
          self.addTrackingArea(area)
     }
+    
 }
+

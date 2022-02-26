@@ -12,7 +12,23 @@ public var Z_AXIS: float3{
     return float3(0,0,1)
 }
 
-extension matrix_float4x4{
+extension Float {
+    
+    var toRadians: Float{
+        return (self / 180.0) * Float.pi
+    }
+    
+    var toDegrees: Float{
+        return self * (180.0 / Float.pi)
+    }
+    
+    static var randomZeroToOne: Float{
+        return Float(arc4random()) / Float(UINT32_MAX)
+    }
+    
+}
+
+extension matrix_float4x4 {
     
     mutating func translate(direction: float3){
         var result = matrix_identity_float4x4
@@ -90,35 +106,6 @@ extension matrix_float4x4{
         
         self = matrix_multiply(self, result)
     }
-    //    mutating func rotate(angle: float3){
-    //        var result = matrix_identity_float4x4
-    //        var x = matrix_identity_float4x4
-    //        var y = matrix_identity_float4x4
-    //        var z = matrix_identity_float4x4
-    //        x.columns = (
-    //            float4(1,0,0,0),
-    //            float4(0,cos(angle.x),-sin(angle.x),0),
-    //            float4(0,sin(angle.x),cos(angle.x),0),
-    //            float4(0,0,0,1)
-    //        )
-    //        y.columns = (
-    //            float4(cos(angle.y),0,sin(angle.y),0),
-    //            float4(0,1,0,0),
-    //            float4(-sin(angle.y),0,cos(angle.y),0),
-    //            float4(0,0,0,1)
-    //        )
-    //        z.columns = (
-    //            float4(cos(angle.z),-sin(angle.z),0,0),
-    //            float4(sin(angle.z),cos(angle.z),0,0),
-    //            float4(0,0,1,0),
-    //            float4(0,0,0,1)
-    //        )
-    //
-    //        self = matrix_multiply(self, x)
-    //        self = matrix_multiply(self, y)
-    //        self = matrix_multiply(self, z)
-    //        }
-    
     
     //https://gamedev.stackexchange.com/questions/120338/what-does-a-perspective-projection-matrix-look-like-in-opengl
     static func perspective(degreesFov: Float, aspectRatio: Float, near: Float, far: Float)->matrix_float4x4{
@@ -140,20 +127,5 @@ extension matrix_float4x4{
         )
         return result
     }
-    
-}
 
-extension Float {
-    
-    var toRadians: Float{
-        return (self / 180.0) * Float.pi
-    }
-    
-    var toDegrees: Float{
-        return self * (180.0 / Float.pi)
-    }
-    static var randomZeroToOne: Float{
-        return Float(arc4random()) / Float(UINT32_MAX)
-    }
-    
 }

@@ -2,15 +2,15 @@ import MetalKit
 
 class InstancedGameObject: Node {
     private var _mesh: Mesh!
-    var material = Material()
-    internal var _nodes: [Node] = []
-    private var _modelConstants: [ModelConstants] = []
     
+    var material = Material()
+    
+    internal var _nodes: [Node] = []
     private var _modelConstantBuffer: MTLBuffer!
     
     init(meshType: MeshTypes, instanceCount: Int) {
-        super.init()
-        self._mesh = MeshLibrary.Mesh(meshType)
+        super.init(name: "Instanced Game Object")
+        self._mesh = Entities.Meshes[meshType]
         self._mesh.setInstanceCount(instanceCount)
         self.generateInstances(instanceCount)
         self.createBuffers(instanceCount)
@@ -19,7 +19,6 @@ class InstancedGameObject: Node {
     func generateInstances(_ instanceCount: Int){
         for _ in 0..<instanceCount {
             _nodes.append(Node())
-            _modelConstants.append(ModelConstants())
         }
     }
     
@@ -27,27 +26,24 @@ class InstancedGameObject: Node {
         _modelConstantBuffer = Engine.Device.makeBuffer(length: ModelConstants.stride(instanceCount), options: [])
     }
     
-    override func update(deltaTime: Float) {
-        
-        updateModelConstantsBuffer()
-        
-        super.update(deltaTime: deltaTime)
-    }
-    
     private func updateModelConstantsBuffer() {
-        var pointer = _modelConstantBuffer.contents().bindMemory(to: ModelConstants.self, capacity: _modelConstants.count)
+        var pointer = _modelConstantBuffer.contents().bindMemory(to: ModelConstants.self, capacity: _nodes.count)
         for node in _nodes {
             pointer.pointee.modelMatrix = matrix_multiply(self.modelMatrix, node.modelMatrix)
             pointer = pointer.advanced(by: 1)
         }
     }
-    
+
+    override func update() {
+        updateModelConstantsBuffer()
+        super.update()
+    }
 }
 
 extension InstancedGameObject: Renderable {
     func doRender(_ renderCommandEncoder: MTLRenderCommandEncoder) {
-        renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.Instanced))
-        renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.DepthStencilState(.Less))
+        renderCommandEncoder.setRenderPipelineState(Graphics.RenderPipelineStates[.Instanced])
+        renderCommandEncoder.setDepthStencilState(Graphics.DepthStencilStates[.Less])
         
         //Vertex Shader
         renderCommandEncoder.setVertexBuffer(_modelConstantBuffer, offset: 0, index: 2)
@@ -57,8 +53,6 @@ extension InstancedGameObject: Renderable {
         
         _mesh.drawPrimitives(renderCommandEncoder)
     }
-    
-    
 }
 
 //Material Properties
@@ -68,3 +62,4 @@ extension InstancedGameObject {
         self.material.useMaterialColor = true
     }
 }
+

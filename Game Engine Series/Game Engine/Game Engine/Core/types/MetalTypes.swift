@@ -19,6 +19,7 @@ extension sizeable{
     }
 }
 
+extension Float: sizeable { }
 extension float3: sizeable { }
 
 struct Vertex: sizeable{
@@ -34,7 +35,9 @@ struct SceneConstants: sizeable {
     var viewMatrix = matrix_identity_float4x4
     var projectionMatrix = matrix_identity_float4x4
 }
+
 struct Material: sizeable{
     var color = float4(0.8, 0.8, 0.8, 1.0)
     var useMaterialColor: Bool = false
 }
+

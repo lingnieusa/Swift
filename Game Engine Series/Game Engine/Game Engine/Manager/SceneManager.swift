@@ -5,7 +5,8 @@ enum SceneTypes{
 }
 
 class SceneManager{
-    private static var _currentScene:Scene!
+    
+    private static var _currentScene: Scene!
     
     public static func Initialize(_ sceneType: SceneTypes){
         SetScene(sceneType)
@@ -19,12 +20,15 @@ class SceneManager{
     }
     
     public static func TickScene(renderCommandEncoder: MTLRenderCommandEncoder, deltaTime: Float){
+        GameTime.UpdateTime(deltaTime)
         
-        _currentScene.updateCameras(deltaTime: deltaTime)
+        _currentScene.updateCameras()
         
-        _currentScene.update(deltaTime: deltaTime)
+        _currentScene.update()
         
         _currentScene.render(renderCommandEncoder: renderCommandEncoder)
         
     }
+    
+    
 }

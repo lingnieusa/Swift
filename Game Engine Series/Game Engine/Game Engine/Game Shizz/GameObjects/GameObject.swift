@@ -1,22 +1,19 @@
 import MetalKit
 
 class GameObject: Node {
+    
+    var modelConstants = ModelConstants()
     private var material = Material()
-    var modelConstants = ModelConstants()//4x4
-    var mesh: Mesh!//vertices dictionary
+    
+    var mesh: Mesh!
     
     init(meshType: MeshTypes) {
-        mesh = MeshLibrary.Mesh(meshType)
+        mesh = Entities.Meshes[meshType]
     }
     
-//    var time:Float = 0
-    override func update(deltaTime:Float){
-//        time += deltaTime
-//        self.rotation = float3(0,0,20*time)
-//        self.position = float3(cos(time)-sin(time),sin(time)*cos(time),1)
-        //self.scale = float3(repeating: cos(time))
-
+    override func update(){
         updateModelConstants()
+        super.update()
     }
     
     private func updateModelConstants(){
@@ -25,12 +22,11 @@ class GameObject: Node {
     
 }
 
-
-
 extension GameObject: Renderable{
     func doRender(_ renderCommandEncoder: MTLRenderCommandEncoder) {
-        renderCommandEncoder.setDepthStencilState(DepthStencilStateLibrary.DepthStencilState(.Less))
-        renderCommandEncoder.setRenderPipelineState(RenderPipelineStateLibrary.PipelineState(.Basic))
+        renderCommandEncoder.setRenderPipelineState(Graphics.RenderPipelineStates[.Basic])
+        renderCommandEncoder.setDepthStencilState(Graphics.DepthStencilStates[.Less])
+        
         //Vertex Shader
         renderCommandEncoder.setVertexBytes(&modelConstants, length: ModelConstants.stride, index: 2)
         
