@@ -10,18 +10,27 @@ vertex RasterizerData basic_vertex_shader(const VertexIn vIn [[ stage_in ]],
     
     rd.position = sceneConstants.projectionMatrix * sceneConstants.viewMatrix * modelConstants.modelMatrix * float4(vIn.position, 1);
     rd.color = vIn.color;
-    rd.texturecoordinate = vIn.texturecoordinate;
-    rd.totalGametime = sceneConstants.totalgameTime;
+    rd.textureCoordinate = vIn.textureCoordinate;
+    rd.totalGameTime = sceneConstants.totalGameTime;
+    
     return rd;
 }
 
 fragment half4 basic_fragment_shader(RasterizerData rd [[ stage_in ]],
-                                     constant Material &material [[ buffer(1) ]]){
-    //float4 color = material.useMaterialColor ? material.color : rd.color;
-    float2 texCoord = rd.texturecoordinate;
-    float gametime = rd.totalGametime;
+                                     constant Material &material [[ buffer(1) ]],
+                                     sampler sampler2d [[ sampler(0) ]],
+                                     texture2d<float> texture [[ texture(0) ]] ){
+    float2 texCoord = rd.textureCoordinate;
     
-    float4 color = float4(sin((texCoord.x+gametime)*10),sin((texCoord.y+gametime)*10),sin((gametime)),1);
+    float4 color;
+    if(material.useTexture){
+        color = texture.sample(sampler2d, texCoord);
+    }else if(material.useMaterialColor) {
+        color = material.color;
+    }else{
+        color = rd.color;
+    }
+    
     return half4(color.r, color.g, color.b, color.a);
 }
 

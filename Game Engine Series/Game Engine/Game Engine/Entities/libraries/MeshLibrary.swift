@@ -52,7 +52,7 @@ class CustomMesh: Mesh {
     func addVertex(position: float3,
                    color: float4 = float4(1,0,1,1),
                    texturecoordinate:float2 = float2(0)) {
-        _vertices.append(Vertex(position: position, color: color, texturecoordinate: texturecoordinate))
+        _vertices.append(Vertex(position: position, color: color, textureCoordinate: texturecoordinate))
     }
     
     func setInstanceCount(_ count: Int) {

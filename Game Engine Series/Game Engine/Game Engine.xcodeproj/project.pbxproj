@@ -31,6 +31,9 @@
 		FC8F946D27C8A8790043EEA5 /* Shared.metal in Sources */ = {isa = PBXBuildFile; fileRef = FC8F946C27C8A8790043EEA5 /* Shared.metal */; };
 		FC8F946F27C8A8950043EEA5 /* BasicShaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = FC8F946E27C8A8950043EEA5 /* BasicShaders.metal */; };
 		FC8F947127C8A97C0043EEA5 /* Quad.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F947027C8A97C0043EEA5 /* Quad.swift */; };
+		FC8F947427CB01FE0043EEA5 /* PartyPirateParot.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F947327CB01FE0043EEA5 /* PartyPirateParot.png */; };
+		FC8F947627CB07BF0043EEA5 /* TextureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F947527CB07BF0043EEA5 /* TextureLibrary.swift */; };
+		FC8F947827CB16C30043EEA5 /* SamplerStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F947727CB16C30043EEA5 /* SamplerStateLibrary.swift */; };
 		FCB23DDB27BF2A420025555E /* MetalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB23DDA27BF2A420025555E /* MetalTypes.swift */; };
 		FCBFEE2227C06C9F00F5339D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2127C06C9F00F5339D /* Engine.swift */; };
 		FCBFEE2427C07E6C00F5339D /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2327C07E6C00F5339D /* Preferences.swift */; };
@@ -101,6 +104,9 @@
 		FC8F946C27C8A8790043EEA5 /* Shared.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shared.metal; sourceTree = "<group>"; };
 		FC8F946E27C8A8950043EEA5 /* BasicShaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = BasicShaders.metal; sourceTree = "<group>"; };
 		FC8F947027C8A97C0043EEA5 /* Quad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quad.swift; sourceTree = "<group>"; };
+		FC8F947327CB01FE0043EEA5 /* PartyPirateParot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PartyPirateParot.png; sourceTree = "<group>"; };
+		FC8F947527CB07BF0043EEA5 /* TextureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLibrary.swift; sourceTree = "<group>"; };
+		FC8F947727CB16C30043EEA5 /* SamplerStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerStateLibrary.swift; sourceTree = "<group>"; };
 		FCB23DDA27BF2A420025555E /* MetalTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalTypes.swift; sourceTree = "<group>"; };
 		FCBFEE2127C06C9F00F5339D /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		FCBFEE2327C07E6C00F5339D /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -253,6 +259,7 @@
 			isa = PBXGroup;
 			children = (
 				FCBFEE3727C2F7D900F5339D /* MeshLibrary.swift */,
+				FC8F947527CB07BF0043EEA5 /* TextureLibrary.swift */,
 			);
 			path = libraries;
 			sourceTree = "<group>";
@@ -266,13 +273,23 @@
 				FCBFEE2927C0A8B100F5339D /* RenderPipelineDescriptorLibrary.swift */,
 				FCBFEE2B27C0A8C800F5339D /* RenderPipelineStateLibrary.swift */,
 				FC8F944F27C70C230043EEA5 /* DepthStencilStateTypes.swift */,
+				FC8F947727CB16C30043EEA5 /* SamplerStateLibrary.swift */,
 			);
 			path = libraries;
+			sourceTree = "<group>";
+		};
+		FC8F947227CB01C60043EEA5 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				FC8F947327CB01FE0043EEA5 /* PartyPirateParot.png */,
+			);
+			path = res;
 			sourceTree = "<group>";
 		};
 		FCBFEE1D27C06BFD00F5339D /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FC8F947227CB01C60043EEA5 /* res */,
 				FCBFEE2127C06C9F00F5339D /* Engine.swift */,
 				FC8F946027C8796F0043EEA5 /* GameTime.swift */,
 				FCBFEE2327C07E6C00F5339D /* Preferences.swift */,
@@ -488,6 +505,7 @@
 			files = (
 				FC3513CE27BD8B3300EAFA76 /* Assets.xcassets in Resources */,
 				FC3513D127BD8B3300EAFA76 /* Main.storyboard in Resources */,
+				FC8F947427CB01FE0043EEA5 /* PartyPirateParot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +543,7 @@
 				FC8F945527C75F490043EEA5 /* InstancedGameObject.swift in Sources */,
 				FCBFEE9027C6C08600F5339D /* CameraManager.swift in Sources */,
 				FCBFEE8927C5E8C000F5339D /* Mouse.swift in Sources */,
+				FC8F947627CB07BF0043EEA5 /* TextureLibrary.swift in Sources */,
 				FCBFEE8E27C60E0A00F5339D /* DebugCamera.swift in Sources */,
 				FC8F945F27C877FF0043EEA5 /* Graphics.swift in Sources */,
 				FC8F946527C8A6AA0043EEA5 /* Shader.swift in Sources */,
@@ -538,6 +557,7 @@
 				FCBFEE4027C4197700F5339D /* Math.swift in Sources */,
 				FCBFEE8027C4AA1500F5339D /* Scene.swift in Sources */,
 				FC8F946327C8A68E0043EEA5 /* Library.swift in Sources */,
+				FC8F947827CB16C30043EEA5 /* SamplerStateLibrary.swift in Sources */,
 				FCBFEE3127C1EC1200F5339D /* GameObject.swift in Sources */,
 				FCBFEE8527C5E73500F5339D /* Keyboard.swift in Sources */,
 				FC8F946B27C8A8100043EEA5 /* VertexShaderTypes.swift in Sources */,
