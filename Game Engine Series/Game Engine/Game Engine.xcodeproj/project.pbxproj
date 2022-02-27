@@ -34,6 +34,10 @@
 		FC8F947427CB01FE0043EEA5 /* PartyPirateParot.png in Resources */ = {isa = PBXBuildFile; fileRef = FC8F947327CB01FE0043EEA5 /* PartyPirateParot.png */; };
 		FC8F947627CB07BF0043EEA5 /* TextureLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F947527CB07BF0043EEA5 /* TextureLibrary.swift */; };
 		FC8F947827CB16C30043EEA5 /* SamplerStateLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F947727CB16C30043EEA5 /* SamplerStateLibrary.swift */; };
+		FC8F947D27CB248D0043EEA5 /* cruiser.obj in Resources */ = {isa = PBXBuildFile; fileRef = FC8F947A27CB248D0043EEA5 /* cruiser.obj */; };
+		FC8F947E27CB248D0043EEA5 /* cruiser.mtl in Resources */ = {isa = PBXBuildFile; fileRef = FC8F947B27CB248D0043EEA5 /* cruiser.mtl */; };
+		FC8F947F27CB248D0043EEA5 /* cruiser.bmp in Resources */ = {isa = PBXBuildFile; fileRef = FC8F947C27CB248D0043EEA5 /* cruiser.bmp */; };
+		FC8F948127CB3AE50043EEA5 /* Cruiser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8F948027CB3AE50043EEA5 /* Cruiser.swift */; };
 		FCB23DDB27BF2A420025555E /* MetalTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB23DDA27BF2A420025555E /* MetalTypes.swift */; };
 		FCBFEE2227C06C9F00F5339D /* Engine.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2127C06C9F00F5339D /* Engine.swift */; };
 		FCBFEE2427C07E6C00F5339D /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBFEE2327C07E6C00F5339D /* Preferences.swift */; };
@@ -107,6 +111,10 @@
 		FC8F947327CB01FE0043EEA5 /* PartyPirateParot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PartyPirateParot.png; sourceTree = "<group>"; };
 		FC8F947527CB07BF0043EEA5 /* TextureLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextureLibrary.swift; sourceTree = "<group>"; };
 		FC8F947727CB16C30043EEA5 /* SamplerStateLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplerStateLibrary.swift; sourceTree = "<group>"; };
+		FC8F947A27CB248D0043EEA5 /* cruiser.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.obj; sourceTree = "<group>"; };
+		FC8F947B27CB248D0043EEA5 /* cruiser.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cruiser.mtl; sourceTree = "<group>"; };
+		FC8F947C27CB248D0043EEA5 /* cruiser.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cruiser.bmp; sourceTree = "<group>"; };
+		FC8F948027CB3AE50043EEA5 /* Cruiser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cruiser.swift; sourceTree = "<group>"; };
 		FCB23DDA27BF2A420025555E /* MetalTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalTypes.swift; sourceTree = "<group>"; };
 		FCBFEE2127C06C9F00F5339D /* Engine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engine.swift; sourceTree = "<group>"; };
 		FCBFEE2327C07E6C00F5339D /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
@@ -281,9 +289,20 @@
 		FC8F947227CB01C60043EEA5 /* res */ = {
 			isa = PBXGroup;
 			children = (
+				FC8F947927CB24750043EEA5 /* cruiser */,
 				FC8F947327CB01FE0043EEA5 /* PartyPirateParot.png */,
 			);
 			path = res;
+			sourceTree = "<group>";
+		};
+		FC8F947927CB24750043EEA5 /* cruiser */ = {
+			isa = PBXGroup;
+			children = (
+				FC8F947C27CB248D0043EEA5 /* cruiser.bmp */,
+				FC8F947B27CB248D0043EEA5 /* cruiser.mtl */,
+				FC8F947A27CB248D0043EEA5 /* cruiser.obj */,
+			);
+			path = cruiser;
 			sourceTree = "<group>";
 		};
 		FCBFEE1D27C06BFD00F5339D /* Core */ = {
@@ -342,6 +361,7 @@
 				FCBFEE3C27C2F8E600F5339D /* Pointer.swift */,
 				FC8F944D27C7064D0043EEA5 /* Cube.swift */,
 				FC8F947027C8A97C0043EEA5 /* Quad.swift */,
+				FC8F948027CB3AE50043EEA5 /* Cruiser.swift */,
 			);
 			path = GameObjects;
 			sourceTree = "<group>";
@@ -503,9 +523,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8F947E27CB248D0043EEA5 /* cruiser.mtl in Resources */,
 				FC3513CE27BD8B3300EAFA76 /* Assets.xcassets in Resources */,
+				FC8F947D27CB248D0043EEA5 /* cruiser.obj in Resources */,
 				FC3513D127BD8B3300EAFA76 /* Main.storyboard in Resources */,
 				FC8F947427CB01FE0043EEA5 /* PartyPirateParot.png in Resources */,
+				FC8F947F27CB248D0043EEA5 /* cruiser.bmp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +562,7 @@
 				FCBFEE2427C07E6C00F5339D /* Preferences.swift in Sources */,
 				FC8F946727C8A7250043EEA5 /* Entities.swift in Sources */,
 				FCBFEE3327C1ED4200F5339D /* Renderer.swift in Sources */,
+				FC8F948127CB3AE50043EEA5 /* Cruiser.swift in Sources */,
 				FCBFEE3827C2F7D900F5339D /* MeshLibrary.swift in Sources */,
 				FC8F945527C75F490043EEA5 /* InstancedGameObject.swift in Sources */,
 				FCBFEE9027C6C08600F5339D /* CameraManager.swift in Sources */,

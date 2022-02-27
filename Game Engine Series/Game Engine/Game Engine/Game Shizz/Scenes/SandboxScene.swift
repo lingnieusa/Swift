@@ -3,17 +3,22 @@ import MetalKit
 class SandboxScene: Scene{
     
     var debugCamera = DebugCamera()
-    var quad = Quad()
+    var cruiser = Cruiser()
+
+    //var quad = Quad()
     override func buildScene() {
         addCamera(debugCamera)
         
         debugCamera.setPositionZ(5)
 
-        quad.setTexture(.PartyPirateParot)
-        addChild(quad)
+        //cruiser.setTexture(.PartyPirateParot)
+        addChild(cruiser)
     }
     
     override func doUpdate() {
-        quad.rotateY(GameTime.DeltaTime)
+        if(Mouse.IsMouseButtonPressed(button: .left)){
+            cruiser.rotateX(Mouse.GetDY() * GameTime.DeltaTime)
+            cruiser.rotateY(Mouse.GetDX() * GameTime.DeltaTime)
+        }
     }
 }
